@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+
+  <head>
+    <title>Integrador Front End</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+
+  </head>
+
+  <body>
+    <header>
+      <div class="container-fluid">  
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+          <a class="navbar-brand ps-5" href="#"><img src="./images/codoacodo.png" alt="" width="100">Conf Bs As</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  me-auto" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto mt-2 mt-lg-0 pe-5">
+              <a class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+              <a class="nav-link" href="index.html#oradores">Los oradores</a>
+              <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
+              <a class="nav-link" href="index.html#conviertete">Conviértete en orador</a>
+              <a class="nav-link" text-success href="comprar-tickets.html">Comprar tickets</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container my-3">
+       <!--Categorias-->
+       <!-- <div class="row"> -->
+        <div class="d-flex justify-content-center">
+      
+          
+          <div class="card-group">
+            <div class="card m-1" style="width: 18rem;">
+              <div class="card-body border border-primary rounded-0 text-center">
+                <h5 class="card-title">Estudiante</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-title font-weight-bold">80%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+
+            <div class="card m-1" style="width: 18rem;">  
+              <div class="card-body border border-info rounded-0 text-center">
+                <h5 class="card-title">Trainee</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-title font-weight-bold">50%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+
+            <div class="card m-1" style="width: 18rem;">  
+              <div class="card-body border border-warning rounded-0 text-center">
+                <h5 class="card-title">Junior</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-title font-weight-bold">15%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      <!-- </div> -->
+
+      <div class="row">
+        <div class="col text-uppercase text-center">
+          <small>Venta</small>
+          <h2>Valor de ticket $200</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+      <div class="row">
+        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+          <form>
+            <div class="row justify-content-md-center">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+              </div>
+              <div class="col-md-12 mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Correo" required>
+              </div>
+              <div class="form-group col-12 col-md-6 mb-3">
+                <label for="cantidadEntrada" class="form-label">Cantidad</label>
+                <input type="number" min="1" class="form-control" id="cantidadEntrada" value="1">
+              </div>
+              <div class="form-group col-12 col-md-6 mb-3">
+                <label for="inputState" class="form-label">Categoria</label>
+                <select class="form-select" id="inputState">
+                  <option value="0" selected>Sin Categoria</option>
+                  <option value="1">Estudiante</option>
+                  <option value="2">Trainee</option>
+                  <option value="3">Junior</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="totalCompra" class="alert alert-primary mt-3 mb-4" role="alert">
+              Total a pagar: $ 
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <button type="reset" class="btn btn-codo btn-block" id="botonBorrar">Borrar</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-codo btn-block" id="botonCalcular">Resumen</button>
+              </div>
+            </div>
+
+            <div class="mt-2">
+              <p id="mensajesValidacion" class="text-danger fw-bold text-center"></p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="menu-footer-bg">
+      <div class="container w-75">
+        <nav class="nav justify-content-center nav-pills flex-column flex-lg-row flex-nowrap">
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Preguntas frecuentes</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Contactanos</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Prensa</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Conferencia</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Términos y condiciones</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Privacidad</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Estudiantes</a>
+        </nav>
+     </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>  
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>
