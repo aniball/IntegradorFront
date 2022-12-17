@@ -47,8 +47,8 @@
                   están creando el futuro de Internet. Ven a conocer a miembros del
                   evento, a otros estudiantes de Codo a Codo y los oradores de primer
                   nivel que tenemos para ti. ¡Te esperamos!</p>
-              <button type="button" class="btn btn-outline-light mb-2 me-2">Quiero ser orador</a>
-              <button type="button" class="btn btn-success mb-2 me-2">Comprar tickets</a>
+              <a href="#conviertete" class="btn btn-outline-light mb-2 me-2" >Quiero ser orador</a>
+              <a href="comprar-tickets.html" class="btn btn-success mb-2 me-2">Comprar tickets</a>
           </div>
       </div>
     </header>
@@ -123,7 +123,7 @@
       <h2 class="text-center">ORADOR</h2>
       <p class="text-center">Anótate como ordador para dar una <abbr title="Son charlas de 5 minutos con 20 slides que avanzan automáticamente">charla ignite</abbr>. Cuéntanos de que quieres hablar!</p>
 
-      <form action="">
+      <form action="agregarOrador.php" method="POST">
         <div class="row justify-content-md-center">
           <div class="col-md-4  ">
             <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
@@ -133,9 +133,15 @@
           </div>
         </div>
         <br>
+        <div class="row justify-content-md-center">
+          <div class="col-md-8  ">
+            <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
+          </div>
+        </div>
+        <br>
         <div class="row row justify-content-md-center">
           <div class="col-md-8">
-            <textarea class="form-control" id="textArea" rows="3" placeholder="Sóbre que quieres hablar?"></textarea>
+            <textarea class="form-control" name="temario" id="textArea" rows="3" placeholder="Sóbre que quieres hablar?"></textarea>
             <p class="text-start text-secondary">Recuerda incluir un titulo para tu charla</p>
           </div>
         </div>
@@ -158,7 +164,7 @@
               <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Conferencia</a>
               <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Términos y condiciones</a>
               <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Privacidad</a>
-              <a class="flex-lg-fill text-sm-center nav-link text-white" href="#">Estudiantes</a>
+              <a class="flex-lg-fill text-sm-center nav-link text-white" href="listaInscripcion.php">Uso Interno</a>
         </nav>
      </div>
     </footer>
